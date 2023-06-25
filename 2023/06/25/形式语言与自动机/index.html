@@ -26,7 +26,7 @@
 
   
 
-  <title>猪猪乐园 | 猪猪乐园</title>
+  <title>形式语言与自动机 | 猪猪乐园</title>
 
   
 
@@ -102,25 +102,22 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">猪猪乐园</h1>
+          <h1 class="title-wrap">形式语言与自动机</h1>
           <h2 class="title-sub-wrap">
             <strong>vico</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2023-06-10T15:06:34.000Z" itemprop="datePublished">2023-06-10</time>
+            <time  class="article-date" datetime="2023-06-25T08:16:22.000Z" itemprop="datePublished">2023-06-25</time>
           </h2>
-          
-            <h2 class="title-sub-wrap new-date">
-              <span>最后更新于</span>
-              <time  class="article-updated" datetime="2023-06-11T03:35:02.756Z" itemprop="dateUpdated">2023-06-11</time>
-            </h2>
           
           
           <ul class="wrap-list dark">
+  
+    <li><a href="/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">📒 期末复习</a></li>
   
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/%E4%B8%BB%E9%A1%B5/">🏷️ 主页</a></li>
+    <li><a href="/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">🏷️ 期末复习</a></li>
   
 </ul>
         </div>
@@ -144,29 +141,156 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><p>鶸/vico 学畜一枚</p>
-<p>主要更新学习内容及学习过程中遇到的问题及解决方法。</p>
-
+        <h1 id="文法"><a href="#文法" class="headerlink" title="文法"></a>文法</h1><p>G=（N，T，P，S）</p>
+<ol>
+<li>N是非终结符的有限集合</li>
+<li>T是终结符的有限集合</li>
+<li>P是转移函数</li>
+<li>S是起始符，S∈N</li>
+</ol>
+<h2 id="0型文法"><a href="#0型文法" class="headerlink" title="0型文法"></a>0型文法</h2><p>无限制，图灵机</p>
+<h2 id="1型文法"><a href="#1型文法" class="headerlink" title="1型文法"></a>1型文法</h2><p>上下文有关文法</p>
+<p>式子左侧至少包含一个非终结符，式子左侧字符长度小于右侧，α-&gt;ε除外</p>
+<p>如A-&gt;B，A-&gt;Bba ，Bb-&gt;A</p>
+<h2 id="2型文法"><a href="#2型文法" class="headerlink" title="2型文法"></a>2型文法</h2><p>上下文无关文法</p>
+<p>式子左侧一定为非终结符，可以为多个</p>
+<p>式子右侧无限制</p>
+<h2 id="3型文法"><a href="#3型文法" class="headerlink" title="3型文法"></a>3型文法</h2><p>正规文法</p>
+<p>包括左线性文法和右线性文法</p>
+<p>右线性：一定为A-&gt;αB或A-&gt;α</p>
+<p>左线性：一定为A-&gt;Bα或A-&gt;α</p>
+<h1 id="有限自动机与右线性文法（3型文法）"><a href="#有限自动机与右线性文法（3型文法）" class="headerlink" title="有限自动机与右线性文法（3型文法）"></a>有限自动机与右线性文法（3型文法）</h1><h2 id="有限自动机"><a href="#有限自动机" class="headerlink" title="有限自动机"></a>有限自动机</h2><h3 id="DFA"><a href="#DFA" class="headerlink" title="DFA"></a>DFA</h3><p>M={Q，T，δ，q0，F}</p>
+<p>Q：有限的状态集合</p>
+<p>T：输入字符集</p>
+<p>δ：转移函数</p>
+<p>q0：起始状态</p>
+<p>F：终止状态</p>
+<p>每个状态和输入有且仅有一个转移后状态</p>
+<h3 id="NFA"><a href="#NFA" class="headerlink" title="NFA"></a>NFA</h3><p>M={Q，T，δ，q0，F}</p>
+<p>Q：有限的状态集合</p>
+<p>T：输入字符集</p>
+<p>δ：转移函数</p>
+<p>q0：起始状态</p>
+<p>F：终止状态</p>
+<p>每个状态和输入可以有多个转移后状态</p>
+<h3 id="NFA2DFA"><a href="#NFA2DFA" class="headerlink" title="NFA2DFA"></a>NFA2DFA</h3><p>无空串：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>a</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{q0}</td>
+<td>……</td>
+<td>……</td>
+</tr>
+<tr>
+<td>……</td>
+<td>……</td>
+<td>……</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>有空串：</p>
+<p>先计算ε闭包，再进行转移</p>
+<h3 id="最小化DFA"><a href="#最小化DFA" class="headerlink" title="最小化DFA"></a>最小化DFA</h3><p><strong>填表法</strong></p>
+<ol>
+<li>区分所有终态和非终态</li>
+<li>若状态r和s通过某个输入符号可分别转换到两个不同状态，则为可区分</li>
+<li>最后得到剩下得不同状态</li>
+</ol>
+<h2 id="正则集"><a href="#正则集" class="headerlink" title="正则集"></a>正则集</h2><h3 id="RE2右线性文法"><a href="#RE2右线性文法" class="headerlink" title="RE2右线性文法"></a>RE2右线性文法</h3><p>a*转换为S-&gt;aS</p>
+<p>aX转换为S-&gt;aX</p>
+<p>(a+b)转换为S-&gt;aX|bX</p>
+<h3 id="DFA2RE"><a href="#DFA2RE" class="headerlink" title="DFA2RE"></a>DFA2RE</h3><p>转换为广义dfa</p>
+<p>化简到最简DFA后再写正则集</p>
+<h3 id="RE2DFA"><a href="#RE2DFA" class="headerlink" title="RE2DFA"></a>RE2DFA</h3><p>找到最小的状态集</p>
+<h3 id="右线性文法2RE"><a href="#右线性文法2RE" class="headerlink" title="右线性文法2RE"></a>右线性文法2RE</h3><p>列方程</p>
+<p>A=a~1~B|a~2~B 转换为 (a~1~+a~2~)B</p>
+<p>A=a~1~A+a~2~A转换为(a~1~+a~2~)*A</p>
+<p>A=a~1~+a~2~A转换为a~1~+a~2~*A</p>
+<h3 id="pumping原理"><a href="#pumping原理" class="headerlink" title="pumping原理"></a>pumping原理</h3><script type="math/tex; mode=display">
+|\omega|=|\omega_1\omega_0\omega_2 |>p\\
+取i=?\\
+|\omega_1\omega_0^i\omega_2|不满足条件\\
+与假设矛盾</script><h2 id="米兰机"><a href="#米兰机" class="headerlink" title="米兰机"></a>米兰机</h2><p>输入字符时产生输出</p>
+<h2 id="摩尔机"><a href="#摩尔机" class="headerlink" title="摩尔机"></a>摩尔机</h2><p>转移到某个状态时产生输出</p>
+<h1 id="上下文无关文法与下推自动机（2型文法）"><a href="#上下文无关文法与下推自动机（2型文法）" class="headerlink" title="上下文无关文法与下推自动机（2型文法）"></a>上下文无关文法与下推自动机（2型文法）</h1><h2 id="规约、推导、分析树之间的关系"><a href="#规约、推导、分析树之间的关系" class="headerlink" title="规约、推导、分析树之间的关系"></a>规约、推导、分析树之间的关系</h2><p>设CFG G = (V,T,P,S)，以下命题是相互等价的</p>
+<ol>
+<li>字符串$w\in T^*$可以归约到非终结符A；</li>
+<li>$A^*\Rightarrow w$</li>
+<li>$A\stackrel{*\ \&amp; \ lm}{\Rightarrow}$</li>
+<li>$A\stackrel{*\ \&amp; \ rm}{\Rightarrow}$</li>
+<li>存在一棵根节点为A的分析树，其边缘为w</li>
+</ol>
+<h2 id="二义性"><a href="#二义性" class="headerlink" title="二义性"></a>二义性</h2><p>对于某一句型，有两颗不同的推导树</p>
+<h2 id="上下文无关文法的简化"><a href="#上下文无关文法的简化" class="headerlink" title="上下文无关文法的简化"></a>上下文无关文法的简化</h2><h3 id="消除无用符号"><a href="#消除无用符号" class="headerlink" title="消除无用符号"></a>消除无用符号</h3><ol>
+<li>删除无法推导出终结符串的非终结符及其产生式</li>
+<li>删除无法由S推导出的非终结符及其产生式</li>
+</ol>
+<h3 id="消去-epsilon-产生式"><a href="#消去-epsilon-产生式" class="headerlink" title="消去$\epsilon$产生式"></a>消去$\epsilon$产生式</h3><p>若生成式中无任何$\epsilon$产生式，或只有一个产生式$S\rightarrow\epsilon$且S不出现在任何生成式的右边，则成G为无$\epsilon$文法</p>
+<ol>
+<li>找出能推导出$\epsilon$的所有非终结符组成N’</li>
+<li>在生成式中所有右侧推导出的N’中的元素，按枚举的方式替换为$\epsilon$，构成P’</li>
+<li>若$S\in N’$，则新建$S’\rightarrow\epsilon|S$</li>
+<li>新文法为（N’,T,P’,S’）</li>
+</ol>
+<h3 id="消去单产生式"><a href="#消去单产生式" class="headerlink" title="消去单产生式"></a>消去单产生式</h3><ol>
+<li>对于每个非终结符构造非终结符集（包含该非终结符推出的单生成式中的非终结符集）</li>
+<li>构造P’</li>
+</ol>
+<h3 id="消除递归"><a href="#消除递归" class="headerlink" title="消除递归"></a>消除递归</h3><p><strong>递归的定义</strong></p>
+<p><img src="/2023/06/25/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA/image-20230620103236009.png" alt="image-20230620103236009"></p>
+<h2 id="Chomsky范式和Greibach范式"><a href="#Chomsky范式和Greibach范式" class="headerlink" title="Chomsky范式和Greibach范式"></a>Chomsky范式和Greibach范式</h2><h3 id="CNF"><a href="#CNF" class="headerlink" title="CNF"></a>CNF</h3><p><strong>定义</strong></p>
+<p><img src="/2023/06/25/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA/image-20230620104822144.png" alt="image-20230620104822144"></p>
+<ol>
+<li>消除$\epsilon$生成式、单生成式、无用符号</li>
+<li>处理不合规的生成式</li>
+</ol>
+<h3 id="GNF"><a href="#GNF" class="headerlink" title="GNF"></a>GNF</h3><p>定义</p>
+<p><img src="/2023/06/25/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA/image-20230620105011942.png" alt="image-20230620105011942"></p>
+<ol>
+<li>构造CNF</li>
+<li>将非终结符排序并代换</li>
+<li>消除左递归</li>
+<li>回代</li>
+<li>将首符变为终结符</li>
+</ol>
+<h2 id="下推自动机PDA"><a href="#下推自动机PDA" class="headerlink" title="下推自动机PDA"></a>下推自动机PDA</h2><p><strong>定义</strong></p>
+<script type="math/tex; mode=display">
+M=(Q,T,\Gamma,\delta,q_0,z_0,F)</script><h2 id="CFG转PDA"><a href="#CFG转PDA" class="headerlink" title="CFG转PDA"></a>CFG转PDA</h2><ol>
+<li>设$CFG\ G=(N,T,P,S)$，构造$M=(Q,T,\Gamma,\delta,q_0,z_0,F)$，其中$Q={q},\Gamma=N\cup T,q_0=q,z_0=S,F=\varphi$</li>
+<li>定义转移函数</li>
+</ol>
+<h2 id="泵浦引理"><a href="#泵浦引理" class="headerlink" title="泵浦引理"></a>泵浦引理</h2><h1 id="图灵机"><a href="#图灵机" class="headerlink" title="图灵机"></a>图灵机</h1><p><strong>定义</strong></p>
+<script type="math/tex; mode=display">
+M=(Q,T,\Sigma,\delta,q_0,B,F)</script>
       </section>
 
       
       
         <nav class="article-nav">
           
+          
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2023/06/11/%E6%AF%9B%E6%A6%82/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">毛泽东思想概论</h2>
+        <a href="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">计算机网络</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       

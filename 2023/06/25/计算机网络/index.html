@@ -141,65 +141,71 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h1><p><img src="/image-20230615104338649.png" alt="image-20230615104359276"></p>
+        <h1 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615104359276.png" alt="image-20230615104359276"></p>
 <h2 id="封装-encapsulation"><a href="#封装-encapsulation" class="headerlink" title="封装 encapsulation"></a>封装 encapsulation</h2><p>下层封装上层</p>
 <h2 id="协议和服务-protocol-amp-service"><a href="#协议和服务-protocol-amp-service" class="headerlink" title="协议和服务 protocol &amp; service"></a>协议和服务 protocol &amp; service</h2><p>协议是对等实体之间的，服务是下层为上层提供的</p>
 <h2 id="面向连接与无连接-connection-oriented-amp-connectionless"><a href="#面向连接与无连接-connection-oriented-amp-connectionless" class="headerlink" title="面向连接与无连接 connection-oriented &amp; connectionless"></a>面向连接与无连接 connection-oriented &amp; connectionless</h2><p>代表TCP和UDP</p>
-<h2 id="分层模型"><a href="#分层模型" class="headerlink" title="分层模型"></a>分层模型</h2><h3 id="OSI"><a href="#OSI" class="headerlink" title="OSI"></a>OSI</h3><table>
+<h2 id="分层模型"><a href="#分层模型" class="headerlink" title="分层模型"></a>分层模型</h2><h3 id="OSI"><a href="#OSI" class="headerlink" title="OSI"></a>OSI</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">应用层</th>
-<th align="center">文件传输</th>
+<th style="text-align:center">应用层</th>
+<th style="text-align:center">文件传输</th>
 <th></th>
 <th></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><strong>表示层</strong></td>
-<td align="center"><strong>数据格式化</strong></td>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>表示层</strong></td>
+<td style="text-align:center"><strong>数据格式化</strong></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td align="center"><strong>会话层</strong></td>
-<td align="center"><strong>解除或建立与其他站点的连接</strong></td>
+<td style="text-align:center"><strong>会话层</strong></td>
+<td style="text-align:center"><strong>解除或建立与其他站点的连接</strong></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td align="center"><strong>传输层</strong></td>
-<td align="center"><strong>提供端对端的接口</strong></td>
+<td style="text-align:center"><strong>传输层</strong></td>
+<td style="text-align:center"><strong>提供端对端的接口</strong></td>
 <td>TCP\UDP</td>
 <td>Segment数据段</td>
 </tr>
 <tr>
-<td align="center"><strong>网络层</strong></td>
-<td align="center"><strong>为数据包选择路由</strong></td>
+<td style="text-align:center"><strong>网络层</strong></td>
+<td style="text-align:center"><strong>为数据包选择路由</strong></td>
 <td>IP、ICMP</td>
 <td>package分组、数据包</td>
 </tr>
 <tr>
-<td align="center"><strong>数据链路层</strong></td>
-<td align="center"><strong>传输有地址的帧，错误检测功能</strong></td>
+<td style="text-align:center"><strong>数据链路层</strong></td>
+<td style="text-align:center"><strong>传输有地址的帧，错误检测功能</strong></td>
 <td>PPP、ARP</td>
 <td>frame帧</td>
 </tr>
 <tr>
-<td align="center"><strong>物理层</strong></td>
-<td align="center"><strong>以二进制的数据形式在物理媒介传输数据</strong></td>
+<td style="text-align:center"><strong>物理层</strong></td>
+<td style="text-align:center"><strong>以二进制的数据形式在物理媒介传输数据</strong></td>
 <td></td>
 <td>比特bit</td>
 </tr>
-</tbody></table>
-<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>应用层</th>
-<th>会话管理、数据加密&#x2F;解密，提供服务</th>
+<th>会话管理、数据加密/解密，提供服务</th>
 <th>DNS、HTTP、FTP、DHCP、TFTP</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><strong>传输层</strong></td>
 <td><strong>建立、维护、管理网络连接中两台计算机的端到端的数据传输</strong></td>
 <td><strong>TCP、UDP</strong></td>
@@ -214,11 +220,19 @@
 <td><strong>控制硬件部分</strong></td>
 <td><strong>CSMA、CD</strong></td>
 </tr>
-</tbody></table>
-<h1 id="物理层-Physical-layer"><a href="#物理层-Physical-layer" class="headerlink" title="物理层 Physical layer"></a>物理层 Physical layer</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615104359276.png" alt="image-20230615104338649"></p>
-<h2 id="带宽和信道容量-Bandwidth-amp-channel-capacity"><a href="#带宽和信道容量-Bandwidth-amp-channel-capacity" class="headerlink" title="带宽和信道容量 Bandwidth &amp; channel capacity"></a>带宽和信道容量 Bandwidth &amp; channel capacity</h2><h2 id="发送时延和传播时延-Transmission-delay-amp-propagation-delay"><a href="#发送时延和传播时延-Transmission-delay-amp-propagation-delay" class="headerlink" title="发送时延和传播时延 Transmission delay &amp; propagation delay"></a>发送时延和传播时延 Transmission delay &amp; propagation delay</h2><p>发送时延：发送一个数据块所需的时间 数据块长度&#x2F;信道带宽</p>
+</tbody>
+</table>
+</div>
+<h1 id="物理层-Physical-layer"><a href="#物理层-Physical-layer" class="headerlink" title="物理层 Physical layer"></a>物理层 Physical layer</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615104359276.png" alt="image-20230615104338649"></p>
+<h2 id="带宽和信道容量-Bandwidth-amp-channel-capacity"><a href="#带宽和信道容量-Bandwidth-amp-channel-capacity" class="headerlink" title="带宽和信道容量 Bandwidth &amp; channel capacity"></a>带宽和信道容量 Bandwidth &amp; channel capacity</h2><h2 id="发送时延和传播时延-Transmission-delay-amp-propagation-delay"><a href="#发送时延和传播时延-Transmission-delay-amp-propagation-delay" class="headerlink" title="发送时延和传播时延 Transmission delay &amp; propagation delay"></a>发送时延和传播时延 Transmission delay &amp; propagation delay</h2><p>发送时延：发送一个数据块所需的时间 数据块长度/信道带宽</p>
 <p>传播时延：信号通过传输介质的时间</p>
-<h2 id="香农公式和奈氏准则-Shannel’s-theorem-amp-Nyquist-Bit-Rate"><a href="#香农公式和奈氏准则-Shannel’s-theorem-amp-Nyquist-Bit-Rate" class="headerlink" title="香农公式和奈氏准则 Shannel’s theorem &amp; Nyquist Bit Rate"></a>香农公式和奈氏准则 Shannel’s theorem &amp; Nyquist Bit Rate</h2><p>带宽受限+有噪声： 香农定理<br>$$<br>极限数据传输率 &#x3D; bandwidth × log_2(1+S&#x2F;N) \<br>S&#x2F;N_{db}&#x3D;10log_{10}S&#x2F;N<br>$$<br>无噪声：奈氏准则<br>$$<br>B &#x3D; 2H<br>\ bit \ rate &#x3D; B×log_2V<br>$$<br>V指码元种类</p>
+<h2 id="香农公式和奈氏准则-Shannel’s-theorem-amp-Nyquist-Bit-Rate"><a href="#香农公式和奈氏准则-Shannel’s-theorem-amp-Nyquist-Bit-Rate" class="headerlink" title="香农公式和奈氏准则 Shannel’s theorem &amp; Nyquist Bit Rate"></a>香农公式和奈氏准则 Shannel’s theorem &amp; Nyquist Bit Rate</h2><p>带宽受限+有噪声： 香农定理</p>
+<script type="math/tex; mode=display">
+极限数据传输率 = bandwidth × log_2(1+S/N) \\
+S/N_{db}=10log_{10}S/N</script><p>无噪声：奈氏准则</p>
+<script type="math/tex; mode=display">
+B = 2H
+\\ bit \ rate = B×log_2V</script><p>V指码元种类</p>
 <h2 id="编码-line-encoding"><a href="#编码-line-encoding" class="headerlink" title="编码 line encoding"></a>编码 line encoding</h2><ol>
 <li><p>非归零编码 NRZ</p>
 <p>高1低0</p>
@@ -239,14 +253,14 @@
 <p>若码元为1，则前半个码元的电平与上一个码元的后半个码元的电平相同；若为0，则相反。</p>
 <p>每个码元之间都有一次电平跳转，可实现自同步，抗干扰性强于曼彻斯特编码</p>
 </li>
-<li><p>4B&#x2F;5B编码</p>
+<li><p>4B/5B编码</p>
 <p>在比特流中插入额外比特以打破一连串的0或1</p>
 </li>
 </ol>
 <h2 id="TDM"><a href="#TDM" class="headerlink" title="TDM"></a>TDM</h2><p>时分复用</p>
 <h2 id="CDMA"><a href="#CDMA" class="headerlink" title="CDMA"></a>CDMA</h2><p>码分复用</p>
 <h2 id="电路交换和分组交换-Circuit-switching-amp-Packet-switching"><a href="#电路交换和分组交换-Circuit-switching-amp-Packet-switching" class="headerlink" title="电路交换和分组交换 Circuit switching &amp; Packet switching"></a>电路交换和分组交换 Circuit switching &amp; Packet switching</h2><h3 id="电路交换-circuit-switching"><a href="#电路交换-circuit-switching" class="headerlink" title="电路交换 circuit switching"></a><strong>电路交换 circuit switching</strong></h3><p>以电路连接为目的的交换方式，通信之前要在通信双方之间建立一条被双方独占的物理通道。</p>
-<p><strong>时延&#x3D;链路建立时延+发送时延+传播时延</strong></p>
+<p><strong>时延=链路建立时延+发送时延+传播时延</strong></p>
 <p><strong>优点</strong></p>
 <ol>
 <li>由于通信线路为通信双方用户专用，数据直达，所以传输数据的时延非常小。</li>
@@ -262,7 +276,7 @@
 <li>电路交换时，数据直达，不同类型，不同规格，不同速率的终端很难相互进行通信，也难以在通信过程中进行差错控制</li>
 </ol>
 <h3 id="分组交换-packet-switching"><a href="#分组交换-packet-switching" class="headerlink" title="分组交换 packet switching"></a>分组交换 packet switching</h3><p>分组交换是以分组为单位进行传输和交换的，它是一种存储——转发交换方式，即将到达交换机的分组先送到存储器暂时存储和处理，等到相应的输出电路有空闲时再送出。</p>
-<p><strong>时延&#x3D;发送时延+（存储）转发时延+传播时延</strong></p>
+<p><strong>时延=发送时延+（存储）转发时延+传播时延</strong></p>
 <p><strong>优点</strong></p>
 <ol>
 <li>分组交换不需要为通信双反预先建立一条专用的通信线路，不存在连接建立时延，用户可随时发送分组。</li>
@@ -278,8 +292,8 @@
 <li>分组交换只适用于数字信号。</li>
 <li>分组交换可能出现失序，丢失或重复分组，分组到达目的节点时，对分组按编号进行排序等工作，增加了麻烦。</li>
 </ol>
-<h1 id="数据链路层-Data-link-layer"><a href="#数据链路层-Data-link-layer" class="headerlink" title="数据链路层 Data link layer"></a>数据链路层 Data link layer</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615150940467.png" alt="image-20230615150940467"></p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615150951606.png" alt="image-20230615150951606"></p>
+<h1 id="数据链路层-Data-link-layer"><a href="#数据链路层-Data-link-layer" class="headerlink" title="数据链路层 Data link layer"></a>数据链路层 Data link layer</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615150940467.png" alt="image-20230615150940467"></p>
+<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615150951606.png" alt="image-20230615150951606"></p>
 <h2 id="成帧-Framing"><a href="#成帧-Framing" class="headerlink" title="成帧 Framing"></a>成帧 Framing</h2><p><strong>透明传输 transparent transmission</strong>：任何比特串都可传输</p>
 <h3 id="字符计数法-Character-Count"><a href="#字符计数法-Character-Count" class="headerlink" title="字符计数法 Character Count"></a>字符计数法 Character Count</h3><p>使用特殊字符代表一个帧的起始，并以一个专门的字段来标识当前帧内字节数的帧同步方法</p>
 <p>但是传输错误容易乱码</p>
@@ -296,47 +310,60 @@
 <p>m为信息比特数</p>
 <p>r为校验码位数</p>
 <p>n为编码位数</p>
-<p>n&#x3D;m+r</p>
-<p>则<br>$$<br>(m+r+1)\le 2^r<br>$$</p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615151801589.png" alt="image-20230615151801589"></p>
+<p>n=m+r</p>
+<p>则</p>
+<script type="math/tex; mode=display">
+(m+r+1)\le 2^r</script><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615151801589.png" alt="image-20230615151801589"></p>
 <h3 id="CRC校验码"><a href="#CRC校验码" class="headerlink" title="CRC校验码"></a>CRC校验码</h3><ol>
 <li><p>准备待传有效数据</p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230424223215388.png" alt="image-20230424223215388"></p>
+<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230424223215388.png" alt="image-20230424223215388"></p>
 </li>
 <li><p>每个组都加上冗余码构成帧再发送</p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230424223248311.png" alt="image-20230424223248311"></p>
-<p>双方商定的除数&#x2F;生成多项式</p>
+<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230424223248311.png" alt="image-20230424223248311"></p>
+<p>双方商定的除数/生成多项式</p>
 <p>r+1位</p>
 <p>FCS帧检验计算方法：</p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230424223548891.png" alt="image-20230424223548891"></p>
+<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230424223548891.png" alt="image-20230424223548891"></p>
 </li>
 <li><p>接收方检验</p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230424223627387.png" alt="image-20230424223627387"></p>
+<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230424223627387.png" alt="image-20230424223627387"></p>
 </li>
 </ol>
 <h2 id="流量控制-Flowing-control"><a href="#流量控制-Flowing-control" class="headerlink" title="流量控制 Flowing control"></a>流量控制 Flowing control</h2><h3 id="自动重传请求-ARQ协议-滑动窗口"><a href="#自动重传请求-ARQ协议-滑动窗口" class="headerlink" title="自动重传请求 ARQ协议 滑动窗口"></a>自动重传请求 ARQ协议 滑动窗口</h3><h4 id="停止等待"><a href="#停止等待" class="headerlink" title="停止等待"></a>停止等待</h4><p>发送窗口和接收窗口大小都为1</p>
 <p>发送一个帧后，必须保存它的副本</p>
 <p>数据帧和确认帧必须编号 </p>
 <p>每发送一帧，接收窗口收到时向前移动并发送ACK，发送窗口收到ACK后向前移动</p>
-<p>一般ACK确认：<br>$$<br>信道利用率&#x3D;\frac1{2a+1}<br>$$<br>捎带回复确认<br>$$<br>信道利用率&#x3D;\frac1{2a+2}<br>$$</p>
-<h4 id="后退N帧GBN"><a href="#后退N帧GBN" class="headerlink" title="后退N帧GBN"></a>后退N帧GBN</h4><p>发送窗口&gt;1,接收窗口&#x3D;1</p>
+<p>一般ACK确认：</p>
+<script type="math/tex; mode=display">
+信道利用率=\frac1{2a+1}</script><p>捎带回复确认</p>
+<script type="math/tex; mode=display">
+信道利用率=\frac1{2a+2}</script><h4 id="后退N帧GBN"><a href="#后退N帧GBN" class="headerlink" title="后退N帧GBN"></a>后退N帧GBN</h4><p>发送窗口&gt;1,接收窗口=1</p>
 <p>接收端发现某一帧发生差错时，直接丢弃后续所有帧，对丢弃帧不发送确认</p>
 <p>发送方超时后按顺序重传所有未被确认的帧</p>
 <p>接收端接收帧的顺序和发送端发出帧的顺序相同</p>
 <p>n表示序号字段长度，2^n^表示发送端可发送帧的序号个数，发送窗口尺寸w应为2^n-1^</p>
-<p>信道利用率&#x3D;$w&#x2F;{(1+2a)}$,其中a&#x3D;传播时延&#x2F;发送时延<br>$$<br>W&#x3D;2^n-1\<br>信道利用率&#x3D;\frac W{2a+1}(短ACK回复)\<br>信道利用率&#x3D;\frac W{2a+2}(捎带回复)\<br>a&#x3D;传播时延&#x2F;发送时延<br>$$</p>
-<h4 id="选择重传SR"><a href="#选择重传SR" class="headerlink" title="选择重传SR"></a>选择重传SR</h4><p>发送窗口&gt;1，接收窗口&gt;1</p>
+<p>信道利用率=$w/{(1+2a)}$,其中a=传播时延/发送时延</p>
+<script type="math/tex; mode=display">
+W=2^n-1\\
+信道利用率=\frac W{2a+1}(短ACK回复)\\
+信道利用率=\frac W{2a+2}(捎带回复)\\
+a=传播时延/发送时延</script><h4 id="选择重传SR"><a href="#选择重传SR" class="headerlink" title="选择重传SR"></a>选择重传SR</h4><p>发送窗口&gt;1，接收窗口&gt;1</p>
 <p>接收方的数据链路层存储坏帧后的所有正确的帧，当发送方得知某个帧出错时，只重传此坏帧，而不是所有后继帧</p>
 <p>在这个协议中，发送方和接收方都维持一个可接收序列号的窗口</p>
 <p>接收窗口的大小&gt;1，并为窗口中的每个序列号都提供一个缓冲区，每个缓冲区用一位判断其是否为空</p>
 <p>当某一帧到达时，接收方检查其序列号，看其是否落在窗口内</p>
-<p>若落在窗口内并且从未接受过，就接收并存储<br>$$<br>W&#x3D;2^{n-1}\<br>信道利用率&#x3D;\frac W{2a+1}(短ACK回复)\<br>信道利用率&#x3D;\frac W{2a+2}(捎带回复)\<br>a&#x3D;传播时延&#x2F;发送时延<br>$$</p>
-<h1 id="MAC子层"><a href="#MAC子层" class="headerlink" title="MAC子层"></a>MAC子层</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615163400619.png" alt="image-20230615163400619"></p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615163408846.png" alt="image-20230615163408846"></p>
-<h1 id="网络层-Network-layer"><a href="#网络层-Network-layer" class="headerlink" title="网络层 Network layer"></a>网络层 Network layer</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615164435736.png" alt="image-20230615164435736"></p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615164445653.png" alt="image-20230615164445653"></p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615164457479.png" alt="image-20230615164457479"></p>
-<h2 id="虚电路与数据包服务-Virtual-circuit-switching-amp-datagram-routing"><a href="#虚电路与数据包服务-Virtual-circuit-switching-amp-datagram-routing" class="headerlink" title="虚电路与数据包服务 Virtual circuit switching &amp; datagram routing"></a>虚电路与数据包服务 Virtual circuit switching &amp; datagram routing</h2><table>
+<p>若落在窗口内并且从未接受过，就接收并存储</p>
+<script type="math/tex; mode=display">
+W=2^{n-1}\\
+信道利用率=\frac W{2a+1}(短ACK回复)\\
+信道利用率=\frac W{2a+2}(捎带回复)\\
+a=传播时延/发送时延</script><h1 id="MAC子层"><a href="#MAC子层" class="headerlink" title="MAC子层"></a>MAC子层</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615163400619.png" alt="image-20230615163400619"></p>
+<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615163408846.png" alt="image-20230615163408846"></p>
+<h1 id="网络层-Network-layer"><a href="#网络层-Network-layer" class="headerlink" title="网络层 Network layer"></a>网络层 Network layer</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615164435736.png" alt="image-20230615164435736"></p>
+<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615164445653.png" alt="image-20230615164445653"></p>
+<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615164457479.png" alt="image-20230615164457479"></p>
+<h2 id="虚电路与数据包服务-Virtual-circuit-switching-amp-datagram-routing"><a href="#虚电路与数据包服务-Virtual-circuit-switching-amp-datagram-routing" class="headerlink" title="虚电路与数据包服务 Virtual circuit switching &amp; datagram routing"></a>虚电路与数据包服务 Virtual circuit switching &amp; datagram routing</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>对比的方面</th>
@@ -344,7 +371,8 @@
 <th>数据报服务</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>思路</td>
 <td>可靠通信应当由网络来保证</td>
 <td>可靠通信应当由用户主机来保证</td>
@@ -379,7 +407,9 @@
 <td>可以由网络负责，也可以由用户主机负责</td>
 <td>由用户主机负责</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="迪杰斯特拉算法-Dijkstra’s-Algorithm"><a href="#迪杰斯特拉算法-Dijkstra’s-Algorithm" class="headerlink" title="迪杰斯特拉算法 Dijkstra’s Algorithm"></a>迪杰斯特拉算法 Dijkstra’s Algorithm</h2><p><img src="https://pic4.zhimg.com/80/v2-d29190c3a51249cbbc0be5ed8ebb7c13_720w.webp" alt="img"></p>
 <h2 id="距离矢量选路-Distance-Verctor-Routing-DVR"><a href="#距离矢量选路-Distance-Verctor-Routing-DVR" class="headerlink" title="距离矢量选路 Distance Verctor Routing DVR"></a>距离矢量选路 Distance Verctor Routing DVR</h2><p>每个路由器维护一张表（即矢量），存放当前已知的到每个目标的最佳距离及链路（下一跳）</p>
 <p>好消息反应快，坏消息反应慢</p>
@@ -390,15 +420,29 @@
 <li>将这个包发送给所有其他的路由器，并接收来自所有其他路由器的信息包</li>
 <li>计算出到每个其他路由器的最短路径</li>
 </ol>
-<h2 id="服务质量-QoS"><a href="#服务质量-QoS" class="headerlink" title="服务质量 QoS"></a>服务质量 QoS</h2><h3 id="令牌桶-Token-Buckets"><a href="#令牌桶-Token-Buckets" class="headerlink" title="令牌桶 Token Buckets"></a>令牌桶 Token Buckets</h3><p>假如用户配置的平均发送速率为r，则每隔1&#x2F;r秒一个令牌被加入到桶中；<br>假设桶最多可以存发b个令牌。如果令牌到达时令牌桶已经满了，那么这个令牌会被丢弃；<br>当一个n个字节的数据包到达时，就从令牌桶中删除n个令牌，并且数据包被发送到网络；<br>如果令牌桶中少于n个令牌，那么不会删除令牌，并且认为这个数据包在流量限制之外；<br>算法允许最长b个字节的突发，但从长期运行结果看，数据包的速率被限制成常量r。对于在流量限制外的数据包可以以不同的方式处理：<br>它们可以被丢弃；<br>它们可以排放在队列中以便当令牌桶中累积了足够多的令牌时再传输；<br>它们可以继续发送，但需要做特殊标记，网络过载的时候将这些特殊标记的包丢弃。</p>
-<h1 id="传输层-Transport-Layer"><a href="#传输层-Transport-Layer" class="headerlink" title="传输层 Transport Layer"></a>传输层 Transport Layer</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615231159692.png" alt="image-20230615231159692"></p>
-<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/develop\blog\source\images\image-20230615231207292.png" alt="image-20230615231207292"></p>
+<h2 id="服务质量-QoS"><a href="#服务质量-QoS" class="headerlink" title="服务质量 QoS"></a>服务质量 QoS</h2><h3 id="令牌桶-Token-Buckets"><a href="#令牌桶-Token-Buckets" class="headerlink" title="令牌桶 Token Buckets"></a>令牌桶 Token Buckets</h3><p>假如用户配置的平均发送速率为r，则每隔1/r秒一个令牌被加入到桶中；<br>假设桶最多可以存发b个令牌。如果令牌到达时令牌桶已经满了，那么这个令牌会被丢弃；<br>当一个n个字节的数据包到达时，就从令牌桶中删除n个令牌，并且数据包被发送到网络；<br>如果令牌桶中少于n个令牌，那么不会删除令牌，并且认为这个数据包在流量限制之外；<br>算法允许最长b个字节的突发，但从长期运行结果看，数据包的速率被限制成常量r。对于在流量限制外的数据包可以以不同的方式处理：<br>它们可以被丢弃；<br>它们可以排放在队列中以便当令牌桶中累积了足够多的令牌时再传输；<br>它们可以继续发送，但需要做特殊标记，网络过载的时候将这些特殊标记的包丢弃。</p>
+<h1 id="传输层-Transport-Layer"><a href="#传输层-Transport-Layer" class="headerlink" title="传输层 Transport Layer"></a>传输层 Transport Layer</h1><p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615231159692.png" alt="image-20230615231159692"></p>
+<p><img src="/2023/06/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20230615231207292.png" alt="image-20230615231207292"></p>
 
       </section>
 
       
       
         <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2023/06/25/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">形式语言与自动机</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
           
           
             <div class="article-nav-item layout-padding">
@@ -449,7 +493,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>3</span>
+        <span>4</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -495,7 +539,7 @@
       
         <li class="categorys-list-item">
           <a href="/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">
-            期末复习 (2)
+            期末复习 (3)
           </a>
         </li>
       
